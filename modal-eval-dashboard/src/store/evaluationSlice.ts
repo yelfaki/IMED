@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { EvaluationRecord } from '../types';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { EvaluationRecord } from '../types';
 
 interface State { records: EvaluationRecord[] }
 const initialState: State = { records: [] };
