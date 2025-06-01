@@ -1,11 +1,11 @@
-// src/components/RecordTable.tsx
 import React from 'react';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../store';
 import type { EvaluationRecord } from '../types';
+import { selectFilteredRecords } from '../store/filterSlice';
 
 export default function RecordTable() {
-  const records = useSelector((state: RootState) => state.evaluation.records);
+  const records = useSelector(selectFilteredRecords);
 
   if (records.length === 0) {
     return <p>No records to display.</p>;
